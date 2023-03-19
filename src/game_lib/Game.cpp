@@ -12,7 +12,7 @@ Game::Game ()
     currentPlayer(0)
 {
   // fixed penalty box error
-  inPenaltyBox[0] = true;
+  inPenaltyBox[6] = true;
 
   for (int question_idx=0; question_idx<50; question_idx++)
   {
@@ -62,10 +62,12 @@ void Game::roll (int roll)
        << endl;
   cout << "They have rolled a " << roll << endl;
 
-  isGettingOutOfPenaltyBox = (roll % 2 != 0);
+  // isGettingOutOfPenaltyBox;
 
   if (inPenaltyBox[currentPlayer])
   {
+    isGettingOutOfPenaltyBox = (roll % 2 != 0);
+
     if (isGettingOutOfPenaltyBox) {
       cout << players[currentPlayer]
            << " is getting out of the penalty box"

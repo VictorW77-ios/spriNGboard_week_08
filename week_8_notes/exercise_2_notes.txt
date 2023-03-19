@@ -1,0 +1,7 @@
+Note anything interesting and how confident I am in the fix
+
+-> I increased the size of inPenaltyBox[] from 0 to 6 to match the argument being passed to it (6).
+
+-> The logic in roll() defines isGettingOutOfPenaltyBox as any dice roll that when %2, the remainder != 0. In the game, this results in any player that rolls an odd number getting the output "[currentPlayer] is getting out of the penalty box" even if they weren't in the Penalty Box to begin with. 
+---> So I defined isGettingOutOfPenaltyBox in the nested if-statement instead (*since it's not necessary to define it within the scope of roll()*), so now the program understands the difference between an odd numbered roll by any player vs an odd numbered roll by a player in the PenaltyBox. 
+--------> I verified that this fix resolved the issue by building the game and confirming that the PenaltyBox logic was only output when the currentPlayer was in the PenaltyBox. 
