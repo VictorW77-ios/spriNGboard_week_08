@@ -36,7 +36,7 @@ RunResults run_trivia_with_seed (string const seed)
       string(" > ") +
       actual_output_filename;
 
-    //cout << "command = (" << command << ")" << endl;
+    // cout << "command = (" << command << ")" << endl;
 
     auto status = system(command.c_str());
     REQUIRE(status == 0);
