@@ -11,7 +11,7 @@ Game::Game ()
     inPenaltyBox(6),
     currentPlayer(0)
 {
-  // preserve existing bug behavior
+  // fixed penalty box error
   inPenaltyBox[0] = true;
 
   for (int question_idx=0; question_idx<50; question_idx++)
