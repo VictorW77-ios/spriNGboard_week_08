@@ -12,7 +12,7 @@ Game::Game ()
     currentPlayer(0)
 {
   // fixed penalty box error
-  inPenaltyBox[6] = true;
+  inPenaltyBox[5] = true;
 
   for (int question_idx=0; question_idx<50; question_idx++)
   {
